@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { simularPartido, Jugador, ResultadoPartido } from "../engine/game";
-
+import { simularPartido, Jugador, ResultadoPartido } from "@/engine/game";
 export default function Home() {
   const [jugador, setJugador] = useState<Jugador>({
     nombre: "Pibe Promesa",
