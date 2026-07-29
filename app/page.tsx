@@ -6,73 +6,74 @@ export default function Home() {
   const [nombre, setNombre] = useState("");
   const [posicion, setPosicion] = useState("DC");
 
+  // Coordenadas para ubicar las posiciones sobre tu cancha de 460x460
   const posiciones = [
-    { id: "EI", top: "32%", left: "25%", label: "Extremo Izquierdo" },
-    { id: "DC", top: "20%", left: "50%", label: "Delantero Centro" },
-    { id: "ED", top: "32%", left: "75%", label: "Extremo Derecho" },
-    { id: "MCO", top: "52%", left: "50%", label: "Medio Ofensivo" },
+    { id: "EI", top: "32%", left: "22%" },
+    { id: "DC", top: "20%", left: "50%" },
+    { id: "ED", top: "32%", left: "78%" },
+    { id: "MCO", top: "58%", left: "50%" },
   ];
 
-  const handleEmpezar = () => {
-    if (!nombre.trim()) {
-      alert("¡Che, poné tu nombre antes de empezar!");
-      return;
-    }
-    alert(`¡Carrera iniciada para ${nombre} jugando de ${posicion}!`);
-    // Acá conectaremos con la pantalla del juego principal
-  };
-
   return (
-    <main className="min-h-screen bg-[#070b19] text-white flex items-center justify-center p-4 selection:bg-blue-500 selection:text-white">
-      {/* Tarjeta Principal Centrada */}
-      <div className="w-full max-w-4xl bg-[#131936]/90 border border-blue-500/30 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-md grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-        
-        {/* COLUMNA IZQUIERDA: Formulario */}
-        <div className="flex flex-col justify-between space-y-6">
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl font-black uppercase tracking-wider text-white">
+    <div className="min-h-screen bg-[#000000] flex items-center justify-center p-4">
+      {/* Contenedor principal de Figma (1070px x 595px) */}
+      <main
+        className="relative w-full max-w-[1070px] min-h-[595px] bg-[#030614] border border-[#233362] rounded-2xl p-8 md:p-12 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25) 2px, transparent 2px, transparent 4px)",
+        }}
+      >
+        {/* COLUMNA IZQUIERDA */}
+        <div className="flex flex-col justify-between h-full space-y-8 z-10">
+          <div className="space-y-8">
+            {/* Título exacto de Figma */}
+            <h1 className="font-[family-name:var(--font-bebas)] text-5xl md:text-6xl text-white font-normal uppercase tracking-[8.16px] leading-none">
               Crea tu futbolista
             </h1>
 
-            {/* Input de Nombre */}
-            <div className="space-y-2">
+            {/* Input exacto de Figma */}
+            <div className="relative flex h-[53px] w-full max-w-[407px] items-center justify-center gap-2.5 rounded-xl border border-solid border-[#818181] bg-[#030303] py-3 pl-4 pr-[9px]">
               <input
                 type="text"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                placeholder="PIBE, DECIME TU NOMBRE..."
-                className="w-full bg-[#0b0f24] border border-blue-500/40 rounded-lg px-4 py-3 text-sm md:text-base text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition"
+                placeholder="pibe, decime tu nombre..."
+                className="w-full bg-transparent text-center font-[family-name:var(--font-bebas)] text-3xl md:text-4xl font-normal leading-normal tracking-wide text-white placeholder:text-[#494949] focus:outline-none"
               />
             </div>
           </div>
 
-          {/* Botón Continuar Carrera */}
+          {/* Botón Continuar Carrera exacto de Figma */}
           <button
-            onClick={handleEmpezar}
-            className="w-full md:w-auto self-start bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg tracking-wide uppercase transition shadow-lg shadow-blue-900/40 hover:scale-[1.02] active:scale-95"
+            onClick={() =>
+              alert(
+                nombre.trim()
+                  ? `¡Carrera iniciada para ${nombre} de ${posicion}!`
+                  : "¡Poné tu nombre antes de empezar!"
+              )
+            }
+            className="self-start font-[family-name:var(--font-bebas)] text-3xl md:text-4xl font-normal text-white uppercase tracking-normal leading-normal hover:text-blue-400 transition cursor-pointer"
           >
-            Continuar Carrera
+            CONTINUAR CARRERA
           </button>
         </div>
 
-        {/* COLUMNA DERECHA: Canchita Táctica */}
-        <div className="flex flex-col space-y-4">
-          <h2 className="text-right text-sm md:text-base font-bold uppercase tracking-wider text-slate-300">
-            ¿De qué jugás pendejo?
+        {/* COLUMNA DERECHA: Cancha + Pregunta */}
+        <div className="flex flex-col space-y-4 z-10 items-end">
+          <h2 className="font-[family-name:var(--font-bebas)] text-3xl md:text-4xl text-white font-normal uppercase tracking-normal">
+            ¿DE QUÉ JUGÁS PENDEJO?
           </h2>
 
-          {/* Representación de la cancha */}
-          <div className="relative w-full aspect-[3/4] bg-[#0b1026] border border-blue-500/30 rounded-xl overflow-hidden p-4 flex flex-col justify-between">
-            {/* Dibujo del Área Grande */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/5 h-1/4 border-b border-x border-blue-500/20 rounded-b-md"></div>
-            {/* Círculo Central */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 border border-blue-500/20 rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-blue-500/40 rounded-full"></div>
-            </div>
-            {/* Línea de Medio Campo */}
-            <div className="absolute top-1/2 left-0 w-full border-t border-blue-500/20"></div>
+          {/* Cancha 460x460 de Figma */}
+          <div className="relative w-full max-w-[460px] aspect-square rounded-xl overflow-hidden border border-[#233362]/40 shadow-2xl">
+            <img
+              src="/cancha.png"
+              alt="Cancha"
+              className="absolute inset-0 w-full h-full object-cover mix-blend-multiply"
+            />
 
-            {/* Botones de Posiciones Interactivos */}
+            {/* Posiciones interactivas sobre la imagen */}
             {posiciones.map((pos) => {
               const isSelected = posicion === pos.id;
               return (
@@ -80,12 +81,11 @@ export default function Home() {
                   key={pos.id}
                   onClick={() => setPosicion(pos.id)}
                   style={{ top: pos.top, left: pos.left }}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full font-bold text-xs md:text-sm flex items-center justify-center transition-all duration-200 shadow-md ${
+                  className={`absolute -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full font-[family-name:var(--font-bebas)] text-xl flex items-center justify-center transition-all cursor-pointer ${
                     isSelected
-                      ? "bg-white text-blue-950 scale-110 ring-4 ring-blue-400 shadow-blue-500/50"
-                      : "bg-[#182046] text-white border border-blue-400/40 hover:bg-blue-600/50"
+                      ? "bg-white text-[#030303] scale-110 shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+                      : "bg-[#030303]/80 text-white border border-[#818181] hover:bg-blue-900"
                   }`}
-                  title={pos.label}
                 >
                   {pos.id}
                 </button>
@@ -93,8 +93,7 @@ export default function Home() {
             })}
           </div>
         </div>
-
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
