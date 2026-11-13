@@ -1,0 +1,59 @@
+[
+  {
+    "id": "lanus-partido-442",
+    "titulo": "Final Recopa 2026",
+    "dt": "Mauricio Pellegrino",
+    "esquema": "4-4-2",
+    "titulares": [
+      { "dorsal": 26, "pos": "ARQ", "nombre": "Nahuel Losada", "alias": ["nahuel losada", "losada"] },
+      { "dorsal": 33, "pos": "LD", "nombre": "Tomas Guidara", "alias": ["tomas guidara", "guidara"] },
+      { "dorsal": 24, "pos": "DFC", "nombre": "Carlos Izquierdoz", "alias": ["carlos izquierdoz", "izquierdoz"] },
+      { "dorsal": 13, "pos": "DFC", "nombre": "José Canale", "alias": ["jose canale", "canale"] },
+      { "dorsal": 6, "pos": "LI", "nombre": "Sasha Marcich", "alias": ["sasha marcich", "marcich"] },
+      { "dorsal": 11, "pos": "MD", "nombre": "Eduardo Salvio", "alias": ["eduardo salvio", "salvio"] },
+      { "dorsal": 17, "pos": "MC", "nombre": "Agustín Medina", "alias": ["agustin medina", "medina"] },
+      { "dorsal": 30, "pos": "MC", "nombre": "Agustín Cardozo", "alias": ["agustin cardozo", "cardozo"] },
+      { "dorsal": 23, "pos": "MI", "nombre": "Ramiro Carrera", "alias": ["ramiro carrera", "carrera"] },
+      { "dorsal": 10, "pos": "DC", "nombre": "Marcelino Moreno", "alias": ["marcelino", "moreno"] },
+      { "dorsal": 19, "pos": "DC", "nombre": "Rodrigo Castillo", "alias": ["rodrigo castillo", "castillo"] }
+    ]
+  },
+  {
+    "id": "lanus-partido-4231",
+    "titulo": "Final Sudamericana 2025",
+    "dt": "Mauricio Pellegrino",
+    "esquema": "4-2-3-1",
+    "titulares": [
+      { "dorsal": 26, "pos": "ARQ", "nombre": "Nahuel Losada", "alias": ["nahuel losada", "losada"] },
+      { "dorsal": 4, "pos": "LD", "nombre": "Gonzalo Pérez", "alias": ["gonzalo perez", "perez"] },
+      { "dorsal": 24, "pos": "DFC", "nombre": "Carlos Izquierdoz", "alias": ["carlos izquierdoz", "izquierdoz"] },
+      { "dorsal": 13, "pos": "DFC", "nombre": "José Canale", "alias": ["jose canale", "canale"] },
+      { "dorsal": 6, "pos": "LI", "nombre": "Sasha Marcich", "alias": ["sasha marcich", "marcich"] },
+      { "dorsal": 17, "pos": "MCD", "nombre": "Agustín Medina", "alias": ["agustin medina", "medina"] },
+      { "dorsal": 30, "pos": "MCD", "nombre": "Agustín Cardozo", "alias": ["agustin cardozo", "cardozo"] },
+      { "dorsal": 11, "pos": "ED", "nombre": "Eduardo Salvio", "alias": ["eduardo salvio", "salvio"] },
+      { "dorsal": 10, "pos": "MCO", "nombre": "Marcelino Moreno", "alias": ["marcelino moreno", "moreno"] },
+      { "dorsal": 23, "pos": "EI", "nombre": "Ramiro Carrera", "alias": ["ramiro carrera", "carrera"] },
+      { "dorsal": 19,"pos": "DC", "nombre": "Rodrigo Castillo", "alias": ["rodrigo castillo", "castillo"] }
+    ]
+  },
+  {
+    "id": "lanus-2016",
+    "titulo": "Final Torneo Transición 2016",
+    "dt": "Jorge Almirón",
+    "esquema": "4-3-3",
+    "titulares": [
+      { "pos": "ARQ", "nombre": "Fernando Monetti", "alias": ["monetti", "mono"] },
+      { "pos": "LD", "nombre": "José Luis Gómez", "alias": ["jose luis gomez", "laucha gomez"] },
+      { "pos": "DFC", "nombre": "Gustavo Gómez", "alias": ["gustavo gomez"] },
+      { "pos": "DFC", "nombre": "Diego Braghieri", "alias": ["braghieri", "diego braghieri"] },
+      { "pos": "LI", "nombre": "Maxi Velázquez", "alias": ["velazquez", "maxi velazquez"] },
+      { "pos": "MC", "nombre": "Román Martínez", "alias": ["martinez", "roman martinez", "roman"] },
+      { "pos": "MCD", "nombre": "Iván Marcone", "alias": ["marcone", "ivan marcone"] },
+      { "pos": "MC", "nombre": "Miguel Almirón", "alias": ["almiron", "miguel almiron", "miguelito"] },
+      { "pos": "ED", "nombre": "Oscar Benitez", "alias": ["benitez", "oscar benitez"] },
+      { "pos": "DC", "nombre": "José Sand", "alias": ["sand", "pepe", "pepe sand", "jose sand"] },
+      { "pos": "EI", "nombre": "Lautaro Acosta", "alias": ["acosta", "laucha", "laucha acosta"] }
+    ]
+  }
+]
